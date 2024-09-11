@@ -1,0 +1,79 @@
+.Home {
+  background-color: #282c34;
+  text-align: center;
+}
+
+.Home-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Home-link {
+  color: #61dafb;
+}
+
+.Home-header > h1 {
+  position: absolute;
+  margin-top: calc(50vh - 1em);
+}
+
+.Home-header > h2 {
+  margin-top: 25vh;
+}
+
+#SplashUp {
+  animation: SplashUpAnim 1s ease-in-out 2s 1 normal forwards;
+}
+
+.Home-header > :not(#SplashUp) {
+  opacity: 0;
+  pointer-events: none;
+  animation: SplashReveal 0.5s ease-in 3s 1 normal forwards;
+}
+
+@keyframes SplashUpAnim {
+  from {margin-top: calc(50vh - 1em);}
+  to {margin-top: 1em;}
+}
+
+@keyframes SplashReveal {
+  from {opacity: 0; pointer-events: none;}
+  to {opacity: 1; pointer-events: all;}
+}
+
+#Options {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+}
+
+#Options > .button {
+  margin: 1vw;
+  padding: 1px 6px;
+  border: 2px outset buttonborder;
+  border-radius: 3px;
+  color: white;
+  background-color: #1c2127;
+  text-decoration: none;
+  line-height: 40vh;
+  min-width: 40vw;
+  max-width: 40vw;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#Options > .button:hover {
+  background-color: #14161a;
+}
+
+#Other {
+  margin-top: 5vh;
+  color: gray;
+}

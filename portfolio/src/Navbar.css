@@ -1,18 +1,39 @@
 .Navbar {
+    font-size: calc(2px + 2vmin);
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-    position: fixed;
+    background-color: #333333;
     top: 0;
     width: 100%;
+    max-height: 3em;
 }
 
 .Navbar > li {
     display: inline-block;
-    color: white;
+    align-content: center;
+}
+
+.Navbar > li > a {
+    display: block;
+    padding: 1em;
     text-align: center;
-    padding: 1em 1em;
+    text-decoration: none;
+}
+.Navbar > li:has(.NavbarLink):hover {
+    background-color: #14161a;
+}
+.Navbar > li:has(.NavbarActive) {
+    background-color: #20242c;
+}
+
+.NavbarActive {
+    color: white;
+    text-decoration: none;
+}
+
+.NavbarLink {
+    color: white;
     text-decoration: none;
 }

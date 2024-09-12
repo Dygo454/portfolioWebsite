@@ -1,0 +1,84 @@
+.About {
+    width: 100%;
+    background-color: #282c34;
+    color: white;
+}
+
+.AboutTitle {
+    max-width: 70%;
+}
+
+.AboutMain {
+    padding: 5vh 5vw;
+    display: grid;
+    gap: 5vw;
+    grid-template-columns: 60vw 20vw;
+}
+
+.AboutMainText {
+    max-width: 100%;
+    font-size: calc(2px + 1vw);
+}
+
+.AboutMainImg {
+    width: 100%;
+    display: table-cell;
+    margin: auto;
+    border-radius: 50%;
+}
+
+@media (max-width: 760px) {
+    .AboutMain {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+    .AboutMainText {
+        max-width: 70vw;
+        align-content: center;
+        font-size: calc(4px + 2vw);
+        /* font-size: 3vw; */
+    }
+    
+    .AboutMainImg {
+        width: 50%;
+        display: table-cell;
+        align-content: center;
+        /* margin: auto; */
+        border-radius: 50%;
+    }
+}
+
+.AboutMainPersonal {
+    padding: 5vh 5vw;
+    margin-top: 5vh;
+}
+
+.AboutMainBar {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    width: 85vw;
+    height: 27vw;
+    /* max-height: 3em; */
+}
+
+.AboutMainBarIco {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.AboutMainBarIco:hover {
+    background-color: #14161a;
+}
+
+.AboutMainBarIco > img {
+    display: block;
+    height: 27vw;
+    padding: 1em;
+    text-decoration: none;
+}

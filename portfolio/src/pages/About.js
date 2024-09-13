@@ -4,6 +4,18 @@ import taekwondo from './../res/icons/taekwondo.png';
 import controller from './../res/icons/controller.png';
 import live from './../res/icons/live.png';
 
+let currInd = -1;
+function setAboutClick(event) {
+  if (event.id === currInd) {
+    return;
+  }
+  if (currInd >= 0) {
+    document.getElementById(currInd+"body").className = "inactiveAbout";
+  }
+  currInd = event.id;
+  document.getElementById(currInd+"body").className = "activeAbout";
+}
+
 function About() {
   return (
     <div className="About">
@@ -30,9 +42,12 @@ function About() {
       </div>
       <div className="AboutMainPersonal">
         <div className='AboutMainBar'>
-          <span className="AboutMainBarIco"><img src={taekwondo} alt="Icon of a taekwondo kick"/></span>
-          <span className="AboutMainBarIco"><img src={controller} alt="Icon of a game controller"/></span>
-          <span className="AboutMainBarIco"><img src={live} alt="Icon of a broadcasting antena"/></span>
+          <span className="AboutMainBarIco" id="0" onClick={setAboutClick}><img src={taekwondo} alt="Icon of a taekwondo kick"/></span>
+          <span className="AboutMainBarIco" id="1" onClick={setAboutClick}><img src={controller} alt="Icon of a game controller"/></span>
+          <span className="AboutMainBarIco" id="2" onClick={setAboutClick}><img src={live} alt="Icon of a broadcasting antena"/></span>
+        </div>
+        <div id="0body" className="inactiveAbout">
+          <p>erm</p>
         </div>
       </div>
     </div>

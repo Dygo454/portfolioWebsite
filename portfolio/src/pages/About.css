@@ -38,14 +38,12 @@
         max-width: 70vw;
         align-content: center;
         font-size: calc(4px + 2vw);
-        /* font-size: 3vw; */
     }
     
     .AboutMainImg {
         width: 50%;
         display: table-cell;
         align-content: center;
-        /* margin: auto; */
         border-radius: 50%;
     }
 }
@@ -62,9 +60,9 @@
     padding: 0;
     overflow: hidden;
     background-color: #333333;
-    width: 85vw;
+    width: 81vw;
+    margin: auto;
     height: 27vw;
-    /* max-height: 3em; */
 }
 
 .AboutMainBarIco {
@@ -79,6 +77,5 @@
 .AboutMainBarIco > img {
     display: block;
     height: 27vw;
-    padding: 1em;
     text-decoration: none;
 }

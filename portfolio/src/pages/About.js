@@ -1,19 +1,25 @@
 import './About.css';
 import pfp from './../res/pfp.png';
+import TaekwondoMe from './../res/other/taekwondo.png';
 import taekwondo from './../res/icons/taekwondo.png';
 import controller from './../res/icons/controller.png';
 import live from './../res/icons/live.png';
 
 let currInd = -1;
 function setAboutClick(event) {
-  if (event.id === currInd) {
+  if (event.target.tagName === "IMG") {
+    event.target = event.target.parentElement;
+  }
+  if (event.target.id === currInd) {
     return;
   }
   if (currInd >= 0) {
     document.getElementById(currInd+"body").className = "inactiveAbout";
+    document.getElementById(currInd).className = "AboutMainBarIco";
   }
-  currInd = event.id;
+  currInd = event.target.id;
   document.getElementById(currInd+"body").className = "activeAbout";
+  event.target.className = "AboutMainBarIcoActive";
 }
 
 function About() {
@@ -42,12 +48,34 @@ function About() {
       </div>
       <div className="AboutMainPersonal">
         <div className='AboutMainBar'>
-          <span className="AboutMainBarIco" id="0" onClick={setAboutClick}><img src={taekwondo} alt="Icon of a taekwondo kick"/></span>
-          <span className="AboutMainBarIco" id="1" onClick={setAboutClick}><img src={controller} alt="Icon of a game controller"/></span>
-          <span className="AboutMainBarIco" id="2" onClick={setAboutClick}><img src={live} alt="Icon of a broadcasting antena"/></span>
+          <span id={0} className="AboutMainBarIco" onClick={setAboutClick}><img src={taekwondo} alt="Icon of a taekwondo kick"/></span>
+          <span id={1} className="AboutMainBarIco" onClick={setAboutClick}><img src={controller} alt="Icon of a game controller"/></span>
+          <span id={2} className="AboutMainBarIco" onClick={setAboutClick}><img src={live} alt="Icon of a broadcasting antena"/></span>
         </div>
-        <div id="0body" className="inactiveAbout">
-          <p>erm</p>
+        <div className="AboutMainPersonalHidden">
+          <div id="0body" className="inactiveAbout">
+            <p>
+              I have been doing taekwondo for almost as long as I can remember.
+              I started at 7 years old and have stuck with it ever since!
+              Taekwondo started as an activity for me and was something fun to do after school.
+              However, after earning my black belt, I realized how passionate I had become.
+              <br/><br/>
+              I began training seriously and participating in various tournaments.
+              Soon after, I became an 'Instructor in Training' and, eventually, an Instructor.
+              With all this training and passion, I became a lot better a lot faster.
+              Especially during quarantine, I got serious and, by the time I was back to in person lessons, I started winning.
+              <br/><br/>
+              Taekwondo has been a big part of who I am for so many years now. It's a sport I truly love and miss when I'm away.
+              I keep up with it to the best of my ability even when I am away. As of now, I am a 4th Dan Black Belt, which I earned in fall 2023.
+            </p>
+            <img src={TaekwondoMe} alt="Icon of a broadcasting antena"/>
+          </div>
+          <div id="1body" className="inactiveAbout">
+            <p>erm</p>
+          </div>
+          <div id="2body" className="inactiveAbout">
+            <p>erm</p>
+          </div>
         </div>
       </div>
     </div>

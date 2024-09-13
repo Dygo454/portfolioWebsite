@@ -61,13 +61,26 @@
     overflow: hidden;
     background-color: #333333;
     width: 81vw;
-    margin: auto;
+    margin: 0 auto;
     height: 27vw;
 }
 
 .AboutMainBarIco {
     display: inline-block;
     cursor: pointer;
+}
+
+.AboutMainBarIcoActive {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #14161a;
+}
+
+.AboutMainBarIcoActive > img {
+    display: block;
+    height: 27vw;
+    width: 27vw;
+    text-decoration: none;
 }
 
 .AboutMainBarIco:hover {
@@ -77,5 +90,36 @@
 .AboutMainBarIco > img {
     display: block;
     height: 27vw;
+    width: 27vw;
     text-decoration: none;
+}
+
+.AboutMainPersonalHidden {
+    width: 81vw;
+    margin: 0 auto;
+    background-color: #14161a;
+}
+
+.AboutMainPersonalHidden > * > * {
+    margin: 0;
+    padding: 1em;
+}
+
+.inactiveAbout {
+    display: none;
+}
+
+.activeAbout {
+    width: 81vw;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.activeAbout > p {
+    padding-top: 1em;
+}
+
+.activeAbout > img {
+    margin: auto;
+    width: 27vw;
 }

@@ -50,7 +50,7 @@
   margin-top: 5vh;
   display: flex;
   justify-content: center;
-  min-width: 100vw;
+  min-width: 100%;
 }
 
 #Options > .button {

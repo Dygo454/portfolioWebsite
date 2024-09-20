@@ -1,18 +1,20 @@
 .About {
-    width: 100%;
+    width: auto;
     background-color: #282c34;
     color: white;
+    padding-bottom: 5vh;
 }
 
 .AboutTitle {
-    max-width: 70%;
+    max-width: 50%;
 }
 
 .AboutMain {
-    padding: 5vh 5vw;
+    width: 90%;
+    padding: 5vh 5%;
     display: grid;
-    gap: 5vw;
-    grid-template-columns: 60vw 20vw;
+    gap: 5%;
+    grid-template-columns: 72.5% 22.5%;
 }
 
 .AboutMainText {
@@ -25,6 +27,126 @@
     display: table-cell;
     margin: auto;
     border-radius: 50%;
+}
+
+.AboutMainPersonal {
+    width: 90vw;
+    margin: 5vh auto 0;
+    background-color: #1f2125;
+}
+
+.AboutMainPersonal > h1 {
+    margin-left: 3vw;
+    padding-top: 3vh;
+}
+
+.AboutMainBar {
+    display: grid;
+    width: 93%;
+    grid-template-columns: 33% 34% 33%;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    margin: 0 3.5%;
+    height: 27vw;
+}
+
+.AboutMainBarIco {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.AboutMainBarIcoActive {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #14161a;
+}
+
+.AboutMainBarIcoActive > img {
+    display: block;
+    height: 27vw;
+    width: 100%;
+    text-decoration: none;
+}
+
+.AboutMainBarIco:hover {
+    background-color: #14161a;
+}
+
+.AboutMainBarIco > img {
+    display: block;
+    height: 27vw;
+    width: 100%;
+    text-decoration: none;
+}
+
+.AboutMainPersonalHidden {
+    width: 93%;
+    margin: 0 auto;
+    padding-bottom: 5vh;
+}
+
+.AboutMainPersonalHidden > * > * {
+    margin: 0;
+    padding: 1em;
+}
+
+.inactiveAbout {
+    background-color: #14161a;
+    overflow: hidden;
+    max-height: 0vh;
+    visibility: hidden;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+            transition: max-height 0.5s ease-out, visibility 0.5s ease-out;
+    -webkit-transition: max-height 0.5s ease-out, visibility 0.5s ease-out;
+       -moz-transition: max-height 0.5s ease-out, visibility 0.5s ease-out;
+         -o-transition: max-height 0.5s ease-out, visibility 0.5s ease-out;
+        -ms-transition: max-height 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.activeAbout {
+    background-color: #14161a;
+    overflow: hidden;
+    max-height: 65vh;
+    visibility: visible;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+            transition: max-height 0.5s ease-in, visibility 0.5s ease-in;
+    -webkit-transition: max-height 0.5s ease-in, visibility 0.5s ease-in;
+       -moz-transition: max-height 0.5s ease-in, visibility 0.5s ease-in;
+         -o-transition: max-height 0.5s ease-in, visibility 0.5s ease-in;
+        -ms-transition: max-height 0.5s ease-in, visibility 0.5s ease-in;
+}
+
+.activeAbout > img {
+    margin: auto;
+    max-height: 60vh;
+    max-width: 40vw;
+    size: auto;
+}
+.inactiveAbout > img {
+    margin: auto;
+    max-height: 60vh;
+    max-width: 40vw;
+    size: auto;
+}
+
+.activeAbout > p {
+    overflow-y: auto;
+    max-height: 60vh;
+    padding-top: 1em;
+    font-size: calc(2px + 1vw);
+}
+.inactiveAbout > p {
+    overflow-y: auto;
+    max-height: 60vh;
+    padding-top: 1em;
+    font-size: calc(2px + 1vw);
 }
 
 @media (max-width: 760px) {
@@ -46,80 +168,47 @@
         align-content: center;
         border-radius: 50%;
     }
-}
 
-.AboutMainPersonal {
-    padding: 5vh 5vw;
-    margin-top: 5vh;
-}
+    .activeAbout > p {
+        overflow-y: auto;
+        max-height: 60vh;
+        padding-top: 1em;
+        font-size: calc(4px + 2vw);
+    }
+    .inactiveAbout > p {
+        overflow-y: auto;
+        max-height: 60vh;
+        padding-top: 1em;
+        font-size: calc(4px + 2vw);
+    }
 
-.AboutMainBar {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
-    width: 81vw;
-    margin: 0 auto;
-    height: 27vw;
-}
+    .inactiveAbout {
+        background-color: #14161a;
+        overflow: hidden;
+        max-height: 0vh;
+        visibility: hidden;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+                transition: max-height 0.5s ease-out, visibility 0.5s ease-out;
+        -webkit-transition: max-height 0.5s ease-out, visibility 0.5s ease-out;
+           -moz-transition: max-height 0.5s ease-out, visibility 0.5s ease-out;
+             -o-transition: max-height 0.5s ease-out, visibility 0.5s ease-out;
+            -ms-transition: max-height 0.5s ease-out, visibility 0.5s ease-out;
+    }
 
-.AboutMainBarIco {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.AboutMainBarIcoActive {
-    display: inline-block;
-    cursor: pointer;
-    background-color: #14161a;
-}
-
-.AboutMainBarIcoActive > img {
-    display: block;
-    height: 27vw;
-    width: 27vw;
-    text-decoration: none;
-}
-
-.AboutMainBarIco:hover {
-    background-color: #14161a;
-}
-
-.AboutMainBarIco > img {
-    display: block;
-    height: 27vw;
-    width: 27vw;
-    text-decoration: none;
-}
-
-.AboutMainPersonalHidden {
-    width: 81vw;
-    margin: 0 auto;
-    background-color: #14161a;
-}
-
-.AboutMainPersonalHidden > * > * {
-    margin: 0;
-    padding: 1em;
-}
-
-.inactiveAbout {
-    display: none;
-}
-
-.activeAbout {
-    width: 81vw;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.activeAbout > p {
-    padding-top: 1em;
-}
-
-.activeAbout > img {
-    margin: auto;
-    width: 27vw;
+    .activeAbout {
+        background-color: #14161a;
+        overflow: hidden;
+        max-height: 80vh;
+        visibility: visible;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+                transition: max-height 0.5s ease-in, visibility 0.5s ease-in;
+        -webkit-transition: max-height 0.5s ease-in, visibility 0.5s ease-in;
+           -moz-transition: max-height 0.5s ease-in, visibility 0.5s ease-in;
+             -o-transition: max-height 0.5s ease-in, visibility 0.5s ease-in;
+            -ms-transition: max-height 0.5s ease-in, visibility 0.5s ease-in;
+    }
 }

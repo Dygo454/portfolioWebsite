@@ -1,25 +1,33 @@
 import './About.css';
+import { Link } from "react-router-dom";
 import pfp from './../res/pfp.png';
 import TaekwondoMe from './../res/other/taekwondo.png';
+import GamesMe from './../res/other/games.png';
+import TwitchMe from './../res/other/TwitchPFP.png';
 import taekwondo from './../res/icons/taekwondo.png';
 import controller from './../res/icons/controller.png';
 import live from './../res/icons/live.png';
 
 let currInd = -1;
-function setAboutClick(event) {
+async function setAboutClick(event) {
   if (event.target.tagName === "IMG") {
     event.target = event.target.parentElement;
   }
   if (event.target.id === currInd) {
+    document.getElementById(currInd+"body").className = "inactiveAbout";
+    event.target.className = "AboutMainBarIco";
+    currInd = -1;
     return;
   }
   if (currInd >= 0) {
     document.getElementById(currInd+"body").className = "inactiveAbout";
     document.getElementById(currInd).className = "AboutMainBarIco";
   }
-  currInd = event.target.id;
-  document.getElementById(currInd+"body").className = "activeAbout";
   event.target.className = "AboutMainBarIcoActive";
+  currInd = event.target.id;
+  setTimeout(() => {
+    document.getElementById(currInd+"body").className = "activeAbout";
+  }, 500);
 }
 
 function About() {
@@ -47,6 +55,7 @@ function About() {
         <img src={pfp} alt="A headshot of me." className="AboutMainImg"></img>
       </div>
       <div className="AboutMainPersonal">
+        <h1>More about me:</h1>
         <div className='AboutMainBar'>
           <span id={0} className="AboutMainBarIco" onClick={setAboutClick}><img src={taekwondo} alt="Icon of a taekwondo kick"/></span>
           <span id={1} className="AboutMainBarIco" onClick={setAboutClick}><img src={controller} alt="Icon of a game controller"/></span>
@@ -68,13 +77,49 @@ function About() {
               Taekwondo has been a big part of who I am for so many years now. It's a sport I truly love and miss when I'm away.
               I keep up with it to the best of my ability even when I am away. As of now, I am a 4th Dan Black Belt, which I earned in fall 2023.
             </p>
-            <img src={TaekwondoMe} alt="Icon of a broadcasting antena"/>
+            <img src={TaekwondoMe} alt="Me performing a jump spin side kick to break two wooden boards"/>
           </div>
           <div id="1body" className="inactiveAbout">
-            <p>erm</p>
+            <p>
+              Gaming has been a hobby of mine for a long time.
+              Some of my most played games are Minecraft, Oxygen Not Included, and Valorant.
+              <br/><br/>
+              My favorite game, however, is OneShot. It's a game I genuinely can't recommend enough,
+              in this game you follow the story of Nico who speaks directly to the player.
+              This allows for a very interesting dynamic that I genuinely love and I think is done very well.
+              That coupled with very pretty pixel art and a really good story made me fall in love with the game.
+              I won't spoil anything but I do genuinely recommend!
+              <br/><br/>
+              As for my most played games, I have been speedrunning Minecraft for a few years now and have made a lot of progress.
+              It is something I still enjoy doing and still love improving on.
+              With the amount of play time I have it is definitely a favorite of mine.
+              Oxygen Not Included is another one of my favorite's. I love it because it challenges my organizational skills.
+              I really do enjoy playing this game and get very excited about successful worlds.
+              Finally, Valorant is another game I enjoy. While I don't play much competitively anymore,
+              I do like the occasional casual games with friends.
+            </p>
+            <img src={GamesMe} alt="Me performing a jump spin side kick to break two wooden boards"/>
           </div>
           <div id="2body" className="inactiveAbout">
-            <p>erm</p>
+            <p>
+              Ever since around 2021 I've been streaming on twitch.
+              Content creation has always been a desired hobby of mine, however,
+              it wasn't until I saved up the money to build my own pc that I could actually realize it.
+              With some supplies and time, I began to stream that summer. At first, I wasn't sure what exactly to do,
+              I bounced between a couple things, like coding/game dev streams and trending games.
+              Eventually, Minecraft speedrunning became trendy so I decided to try my hand at it.
+              <br/><br/>
+              The thing about speedrunning is that there is a lot of science and math put into it,
+              so being a historically technicaly player I found it very interesting.
+              It didn't take long for me to start taking it more seriously and it soon became the norm.
+              Even now when given the chance I speedrun, streaming or not, because it has been something I've enjoyed.
+              <br/><br/>
+              With an interest in this area and a genuine interest in content creation as a whole,
+              I've always wondered how to make speedrunning more viewer friendly and have taken steps to make my streams more enjoyable.
+              I really do enjoy turning on the camera and having fun with my little comunity,
+              and I hope to make things even more fun with a project I've recently started (more on that <Link href='/projects'>here</Link>).
+            </p>
+            <img src={TwitchMe} alt="My avatar for twitch streaming"/>
           </div>
         </div>
       </div>

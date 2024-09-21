@@ -1,0 +1,21 @@
+name: Deploy Portfolio Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install sshpass
+
+    - name: Deploy to VPS
+      run: sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o root@diegoaguilar.me 'cd /var/www/html/portfolioWebsite && git fetch && git pull && sudo systemctl restart apache2'

@@ -12,6 +12,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+
+    - name: test
+      run: npm -v
       
     - name: Deploy to server
       uses: appleboy/ssh-action@master

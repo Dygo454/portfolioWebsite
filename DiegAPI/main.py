@@ -1,7 +1,8 @@
-from flask import Flask
+from flask import Flask, request
+import os
+import subprocess
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+def create_app():
+   return app

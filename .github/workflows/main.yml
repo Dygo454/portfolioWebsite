@@ -1,0 +1,22 @@
+name: Deploy Portfolio Website
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Deploy to server
+      uses: appleboy/ssh-action@master
+      with:
+        host: diegoaguilar.me
+        username: root
+        password: ${{ secrets.SSH_PASSWORD }}
+        script: cd /var/www/html/portfolioWebsite && npm -v && git fetch && git pull && cd portfolio && npm install && npm run build && sudo systemctl restart apache2

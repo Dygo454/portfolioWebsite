@@ -22,4 +22,4 @@ jobs:
         host: diegoaguilar.me
         username: root
         password: ${{ secrets.SSH_PASSWORD }}
-        script: cd /var/www/html/portfolioWebsite && nvm use --lts && git fetch && git pull && cd portfolio && npm install && npm run build && sudo systemctl restart apache2
+        script: cd /var/www/html/portfolioWebsite && npm install npm@latest && git fetch && git pull && cd portfolio && npm install && npm run build && sudo systemctl restart apache2

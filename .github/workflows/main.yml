@@ -7,15 +7,16 @@ on:
 
 jobs:
   deploy:
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
       
-    - name: Install dependencies
-      run: |
-        sudo apt update
-        sudo apt install sshpass
-
-    - name: Deploy to VPS
-      run: sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o root@diegoaguilar.me 'cd /var/www/html/portfolioWebsite && git fetch && git pull && cd portfolio && npm run build && sudo systemctl restart apache2'
+    - name: Deploy to server
+      uses: appleboy/ssh-action@master
+      with:
+        host: diegoaguilar.me
+        username: root
+        password: ${{ secrets.SSH_PASSWORD }}
+        script: cd /var/www/html/portfolioWebsite && git fetch && git pull && cd portfolio && npm run build && sudo systemctl restart apache2

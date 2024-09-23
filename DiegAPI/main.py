@@ -27,7 +27,7 @@ def GHidData():
       resp.headers['Access-Control-Allow-Headers'] = 'Content-Type, Origin, Accept'
       return resp
    desc = info['description']
-   status = info['description']
+   status = "Status: N/A" # temporary will use ghapi more in the future
 
    resp = Response('{"title": "'+data["GHid"]+'", "desc": "'+desc+'", "status": "'+status+'"}', 200)
    resp.headers['Access-Control-Allow-Origin'] = '*'

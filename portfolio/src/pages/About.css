@@ -149,6 +149,10 @@
     font-size: calc(2px + 1vw);
 }
 
+a {
+    color: white;
+}
+
 @media (max-width: 760px) {
     .AboutMain {
         display: grid;

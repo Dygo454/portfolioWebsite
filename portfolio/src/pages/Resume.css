@@ -1,14 +1,10 @@
-.Recruit {
+.Resume {
     width: auto;
     background-color: #282c34;
     color: white;
     padding: 5vh;
 }
 
-.Recruit > a {
-    color: white;
-}
-
-.Recruit > * > a {
+.Resume > * > a {
     color: white;
 }

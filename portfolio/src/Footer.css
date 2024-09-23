@@ -1,0 +1,39 @@
+.Footer {
+    width: 100%;
+    font-size: calc(2px + 2vmin);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    top: 0;
+    width: auto;
+}
+
+.Footer > li {
+    display: inline-block;
+    align-content: center;
+}
+
+.Footer > li > a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.Footer > li:has(.FooterLink):hover {
+    background-color: #14161a;
+}
+.Footer > li:has(.FooterActive) {
+    background-color: #20242c;
+}
+
+.FooterActive {
+    color: white;
+    text-decoration: none;
+}
+
+.FooterLink {
+    color: white;
+    text-decoration: none;
+}

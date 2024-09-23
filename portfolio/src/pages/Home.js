@@ -6,10 +6,10 @@ function Home() {
     <div className="Home">
       <header className="Home-header">
         <h1 id="SplashUp">Hello! Welcome to my portfolio website.</h1>
-        <h2>Would you like to see a page tailored for a recruiter?</h2>
+        <h2>You would like to...</h2>
         <div id="Options">
-          <Link to="/recruit" className="button">Yes</Link>
-          <Link to="/about" className="button">No</Link>
+          <Link to="/about" className="button">Start with the about page.</Link>
+          <Link to="/recruit" className="button">Skip to the summarized recruiter page.</Link>
         </div>
       </header>
     </div>

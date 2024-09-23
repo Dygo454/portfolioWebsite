@@ -117,7 +117,7 @@ function About() {
               With an interest in this area and a genuine interest in content creation as a whole,
               I've always wondered how to make speedrunning more viewer friendly and have taken steps to make my streams more enjoyable.
               I really do enjoy turning on the camera and having fun with my little comunity,
-              and I hope to make things even more fun with a project I've recently started (more on that <Link href='/projects'>here</Link>).
+              and I hope to make things even more fun with a project I've recently started (more on 'Pace Bingo' <Link to='/projects'>here</Link>).
             </p>
             <img src={TwitchMe} alt="My avatar for twitch streaming"/>
           </div>

@@ -1,0 +1,55 @@
+.CurrentProject {
+    text-decoration: none;
+    color: white;
+    padding: 1em 1em;
+    display: grid;
+    grid-template-rows: 1em 18vh 12vh;
+    row-gap: 1em;
+    align-self: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10%;
+    scale: 100%;
+    transition: scale 0.5s ease-in-out;
+     -webkit-transition: scale 0.5s ease-in-out;
+        -moz-transition: scale 0.5s ease-in-out;
+          -o-transition: scale 0.5s ease-in-out;
+         -ms-transition: scale 0.5s ease-in-out;
+}
+
+.CurrentProject:hover {
+    overflow-y: auto;
+    background-size: 0;
+    scale: 105%;
+    transition: scale 0.5s ease-in-out;
+     -webkit-transition: scale 0.5s ease-in-out;
+        -moz-transition: scale 0.5s ease-in-out;
+          -o-transition: scale 0.5s ease-in-out;
+         -ms-transition: scale 0.5s ease-in-out;
+}
+
+.CurrentProject > h3 {
+    font-size: calc(calc(5px + 0.75vw)*1.25);
+}
+
+.CurrentProject > p {
+    font-size: calc(5px + 0.75vw);
+}
+
+.CurrentProject > * {
+    padding: 1em;
+    margin: 0;
+    visibility: hidden;
+    text-align: left;
+}
+
+.CurrentProject:hover > * {
+    visibility: visible;
+}
+
+@media screen and (max-width: 760px) {
+    .CurrentProject:hover > * {
+        display: none;
+    }
+}

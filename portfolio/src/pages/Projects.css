@@ -1,0 +1,28 @@
+.Projects {
+    width: auto;
+    background-color: #282c34;
+    color: white;
+    padding-bottom: 5vh;
+}
+
+.ProjectsMain {
+    width: 90%;
+    padding: 5vh 5%;
+}
+
+.ProjectsMain > h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.CurrentProjects {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 5%;
+}
+
+.PastProjects {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 5%;
+}

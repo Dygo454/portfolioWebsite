@@ -35,6 +35,7 @@ function Projects() {
             <CurrentProject
                 data-GHid={"portfolioWebsite"}
                 data-title={"Portfolio Website"}
+                data-state={"State: Deployed, still recieving updates!"}
                 data-img={PortfolioWebsite}
             />
         </div>

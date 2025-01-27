@@ -59,7 +59,7 @@ function Resume() {
             <li>Integrated core mechanics utilizing design patterns, including decorators, commands, and mediators.</li>
         </ul>
         <br/>
-        <p><b>Spell Checker</b><span style={{float: "right"}}>November 2023</span></p>
+        <p><b>Advisor Ally</b><span style={{float: "right"}}>January 2024 - April 2024</span></p>
         <p><i>CEN3031 | University of Florida</i>,  Gainesville, FL</p>
         <ul>
             <li>Utilized Agile frameworks to develop a web application, managing workloads into sprints and CI/CD development.</li>

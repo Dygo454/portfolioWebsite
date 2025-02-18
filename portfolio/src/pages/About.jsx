@@ -1,12 +1,12 @@
 import './About.css';
 import { Link } from "react-router-dom";
-import pfp from './../res/pfp.png';
-import TaekwondoMe from './../res/other/taekwondo.png';
-import GamesMe from './../res/other/games.png';
-import TwitchMe from './../res/other/TwitchPFP.png';
-import taekwondo from './../res/icons/taekwondo.png';
-import controller from './../res/icons/controller.png';
-import live from './../res/icons/live.png';
+import pfp from '../res/pfp.png';
+import TaekwondoMe from '../res/other/taekwondo.png';
+import GamesMe from '../res/other/games.png';
+import TwitchMe from '../res/other/TwitchPFP.png';
+import taekwondo from '../res/icons/taekwondo.png';
+import controller from '../res/icons/controller.png';
+import live from '../res/icons/live.png';
 
 let currInd = -1;
 async function setAboutClick(event) {

@@ -2,16 +2,16 @@ import './Projects.css';
 import CurrentProject from './projectTags/CurrentProject';
 import PastProject from './projectTags/PastProject';
 
-import DGE from './../res/projectPics/DGE.png';
-import PaceBingo from './../res/projectPics/paceBingo.png';
-import PortfolioWebsite from './../res/projectPics/portfolio.png';
+import DGE from '../res/projectPics/DGE.png';
+import PaceBingo from '../res/projectPics/paceBingo.png';
+import PortfolioWebsite from '../res/projectPics/portfolio.png';
 
-import SpellChecker from './../res/projectPics/SpellCheck.png';
-import DontLook from './../res/projectPics/DontLook.png';
-import DoorsNDragons from './../res/projectPics/DoorsNDragons.png';
-import SpyCubed from './../res/projectPics/SpyCubed.png';
-import OverflowException from './../res/projectPics/Overflow.png';
-import Machukuna from './../res/projectPics/Machukuna.png';
+import SpellChecker from '../res/projectPics/SpellCheck.png';
+import DontLook from '../res/projectPics/DontLook.png';
+import DoorsNDragons from '../res/projectPics/DoorsNDragons.png';
+import SpyCubed from '../res/projectPics/SpyCubed.png';
+import OverflowException from '../res/projectPics/Overflow.png';
+import Machukuna from '../res/projectPics/Machukuna.png';
 
 function Projects() {
   return (

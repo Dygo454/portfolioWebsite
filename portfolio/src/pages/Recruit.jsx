@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import './Recruit.css';
-import ResumePDF from './../res/files/DiegoAguilar.pdf';
+import ResumePDF from '../res/files/DiegoAguilar.pdf';
 
 function Recruit() {
   return (

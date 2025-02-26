@@ -14,7 +14,7 @@ import Footer from './Footer';
 const Main = () => {
   return (
     <Routes>
-      <Route path='/home' element={<Home/>}></Route>
+      <Route path='/home' element={<><Navbar/><Home/></>}></Route>
       <Route path='/recruit' element={<div className="Main"><Navbar/><Recruit/><Footer/></div>}></Route>
       <Route path='/about' element={<div className="Main"><Navbar/><About/><Footer/></div>}></Route>
       <Route path='/projects' element={<div className="Main"><Navbar/><Projects/><Footer/></div>}></Route>

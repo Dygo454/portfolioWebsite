@@ -33,12 +33,12 @@
 .Home-header > :not(#SplashUp) {
   opacity: 0;
   pointer-events: none;
-  animation: SplashReveal 0.5s ease-in 3s 1 normal forwards;
+  animation: SplashReveal 0.5s ease-in 2s 1 normal forwards;
 }
 
 @keyframes SplashUpAnim {
-  from {margin-top: calc(50vh - 1em);}
-  to {margin-top: 1em;}
+  from {margin-top: calc(50vh - 1em); opacity: 1;}
+  to {margin-top: -1.5em; opacity: 0;}
 }
 
 @keyframes SplashReveal {
@@ -46,35 +46,43 @@
   to {opacity: 1; pointer-events: all;}
 }
 
-#Options {
-  margin-top: 5vh;
-  display: flex;
-  justify-content: center;
+#Splash {
+  margin-top: 10vh;
+  min-height: 90vh;
+  align-content: center;
+  display: grid;
+  grid-template-columns: 55vw 25vw;
+  gap: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Splash > * {
   min-width: 100%;
+  max-width: 100%;
+}
+#Splash > img {
+  border-radius: 20%;
+}
+#SplashLeft {
+  display: grid;
+  line-height: 0;
+  font-size: 3vw;
+  grid-template-rows: 1.5em 2.5em 1.5em;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: left;
 }
 
-#Options > .button {
-  margin: 1vw;
-  padding: 1px 6px;
-  border: 2px outset buttonborder;
-  border-radius: 3px;
-  color: white;
-  background-color: #1c2127;
-  text-decoration: none;
-  line-height: 40vh;
-  min-width: 40vw;
-  max-width: 40vw;
-  text-wrap: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: xx-large;
-}
-
-#Options > .button:hover {
-  background-color: #14161a;
-}
-
-#Other {
-  margin-top: 5vh;
-  color: gray;
+@media screen and (max-width: 760px) {
+  #Splash {
+    margin-top: 10vh;
+    min-height: 90vh;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 70vw;
+    grid-template-rows: 25vh 55vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
 }

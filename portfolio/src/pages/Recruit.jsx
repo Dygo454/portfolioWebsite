@@ -5,7 +5,9 @@ import ResumePDF from '../res/files/DiegoAguilar.pdf';
 function Recruit() {
   return (
     <div className="Recruit">
-      <h1>Who I am:</h1>
+      <h1 style={{textAlign:"center"}}>Summarized info for recruiters!</h1>
+      <hr/>
+      <h2>Who I am:</h2>
       <p>
         I'm Diego Aguilar, an indie game and software developer.
         I have loved making games for as long as I've been doing it,
@@ -18,7 +20,7 @@ function Recruit() {
       </p>
       <br/>
       <br/>
-      <h1>What I do:</h1>
+      <h2>What I do:</h2>
       <p>
         I make games, apps, websites, software, etc.
         I have taught myself a lot of different fields within Computer Science,
@@ -29,7 +31,7 @@ function Recruit() {
       </p>
       <br/>
       <br/>
-      <h1>My Goals:</h1>
+      <h2>My Goals:</h2>
       <p>
         My end goal in any job, internship, or work experience is, and always has been, to learn.
         Something about me is that I have always loved to learn.
@@ -42,7 +44,7 @@ function Recruit() {
       </p>
       <br/>
       <br/>
-      <h1>My Skills:</h1>
+      <h2>My Skills:</h2>
       <p>
         My biggest asset, by far, is my being a quick learner.
         I do have a varied set of technical skills that, I believe, alone set me apart.

@@ -1,9 +1,10 @@
 .PastProject {
     text-decoration: none;
+    height: 30vw;
     color: white;
     padding: 1em 1em;
     display: grid;
-    grid-template-rows: 1em 20vh;
+    grid-template-rows: auto auto;
     row-gap: 1em;
     align-self: center;
     background-position: center;
@@ -18,25 +19,6 @@
          -ms-transition: scale 0.5s ease-in-out;
 }
 
-.PastProject:hover {
-    overflow-y: auto;
-    background-size: 0;
-    scale: 105%;
-    transition: scale 0.5s ease-in-out;
-     -webkit-transition: scale 0.5s ease-in-out;
-        -moz-transition: scale 0.5s ease-in-out;
-          -o-transition: scale 0.5s ease-in-out;
-         -ms-transition: scale 0.5s ease-in-out;
-}
-
-.PastProject > h3 {
-    font-size: calc(calc(5px + 0.75vw)*1.25);
-}
-
-.PastProject > p {
-    font-size: calc(5px + 0.75vw);
-}
-
 .PastProject > * {
     padding: 1em;
     margin: 0;
@@ -44,12 +26,27 @@
     text-align: left;
 }
 
-.PastProject:hover > * {
-    visibility: visible;
+@media screen and (min-width: 760px) {
+    .PastProject:hover {
+        overflow-y: auto;
+        background-size: 0;
+        scale: 105%;
+        transition: scale 0.5s ease-in-out;
+        -webkit-transition: scale 0.5s ease-in-out;
+           -moz-transition: scale 0.5s ease-in-out;
+             -o-transition: scale 0.5s ease-in-out;
+            -ms-transition: scale 0.5s ease-in-out;
+    }
+
+    .PastProject:hover > * {
+        visibility: visible;
+    }
 }
 
-@media screen and (max-width: 760px) {
-    .PastProject:hover > * {
-        display: none;
-    }
+.PastProject > h3 {
+    font-size: 2.75vw;
+}
+
+.PastProject > p {
+    font-size: 1.25vw;
 }

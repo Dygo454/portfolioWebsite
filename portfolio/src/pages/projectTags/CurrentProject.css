@@ -1,9 +1,10 @@
 .CurrentProject {
     text-decoration: none;
+    height: 30vw;
     color: white;
     padding: 1em 1em;
     display: grid;
-    grid-template-rows: 1em 18vh 12vh;
+    grid-template-rows: 1em 50% 30%;
     row-gap: 1em;
     align-self: center;
     background-position: center;
@@ -18,15 +19,28 @@
          -ms-transition: scale 0.5s ease-in-out;
 }
 
-.CurrentProject:hover {
-    overflow-y: auto;
-    background-size: 0;
-    scale: 105%;
-    transition: scale 0.5s ease-in-out;
-     -webkit-transition: scale 0.5s ease-in-out;
-        -moz-transition: scale 0.5s ease-in-out;
-          -o-transition: scale 0.5s ease-in-out;
-         -ms-transition: scale 0.5s ease-in-out;
+.CurrentProject > * {
+    padding: 1em;
+    margin: 0;
+    visibility: hidden;
+    text-align: left;
+}
+
+@media screen and (min-width: 760px) {
+    .CurrentProject:hover {
+        overflow-y: auto;
+        background-size: 0;
+        scale: 105%;
+        transition: scale 0.5s ease-in-out;
+        -webkit-transition: scale 0.5s ease-in-out;
+           -moz-transition: scale 0.5s ease-in-out;
+             -o-transition: scale 0.5s ease-in-out;
+            -ms-transition: scale 0.5s ease-in-out;
+    }
+    
+    .CurrentProject:hover > * {
+        visibility: visible;
+    }
 }
 
 .CurrentProject > h3 {
@@ -35,21 +49,4 @@
 
 .CurrentProject > p {
     font-size: calc(5px + 0.75vw);
-}
-
-.CurrentProject > * {
-    padding: 1em;
-    margin: 0;
-    visibility: hidden;
-    text-align: left;
-}
-
-.CurrentProject:hover > * {
-    visibility: visible;
-}
-
-@media screen and (max-width: 760px) {
-    .CurrentProject:hover > * {
-        display: none;
-    }
 }
